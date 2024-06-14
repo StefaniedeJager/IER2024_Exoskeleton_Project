@@ -1,0 +1,62 @@
+%% Friedman
+%% Step Length
+% Load the data from the Excel file
+data = xlsread('StepLength_2vs6_2.xlsx');
+
+% Perform the Friedman test
+[p, tbl, stats] = friedman(data);
+% Number of subjects (rows in your data)
+N = size(data, 1);
+
+% Number of conditions (columns in your data)
+k = size(data, 2);
+
+% Extract the chi-squared value from the table (tbl)
+chiSquared = tbl{2, 5}; % The chi-squared value is typically in the second row, fifth column
+
+% Calculate Kendall's W
+kendallsW = chiSquared / (N * (k - 1));
+
+% View the results
+disp(tbl);
+disp(['Friedman chi-squared = ', num2str(chiSquared)]);
+disp(['p-value = ', num2str(p)]);
+disp(['Kendall''s W = ', num2str(kendallsW)]);
+
+% Calculate the degrees of freedom
+df = size(data, 2) - 1;
+
+% Report the results
+report = sprintf('χ²(%d) = %.2f, p = %.3f', df, chiSquared, p);
+disp(report);
+
+%% Step Width
+% Load the data from the Excel file
+data = xlsread('StepWidth_2vs6_2.xlsx');
+
+% Perform the Friedman test
+[p, tbl, stats] = friedman(data);
+% Number of subjects (rows in your data)
+N = size(data, 1);
+
+% Number of conditions (columns in your data)
+k = size(data, 2);
+
+% Extract the chi-squared value from the table (tbl)
+chiSquared = tbl{2, 5}; % The chi-squared value is typically in the second row, fifth column
+
+% Calculate Kendall's W
+kendallsW = chiSquared / (N * (k - 1));
+
+% View the results
+disp(tbl);
+disp(['Friedman chi-squared = ', num2str(chiSquared)]);
+disp(['p-value = ', num2str(p)]);
+disp(['Kendall''s W = ', num2str(kendallsW)]);
+
+% Calculate the degrees of freedom
+df = size(data, 2) - 1;
+
+% Report the results
+report = sprintf('χ²(%d) = %.2f, p = %.3f', df, chiSquared, p);
+disp(report);
