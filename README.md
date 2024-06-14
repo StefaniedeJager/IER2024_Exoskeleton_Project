@@ -59,18 +59,18 @@ This repository contains two Matlab scripts:
 This folder contains the data stored in .xlsx files and the code for conducting statistical analyses in matlab files of R files. 
 
 **Data Files: Normality check**
-- StepLength_Day2_2.xlsx:
-- StepLength_Day6_2.xlsx:
-- StepWidth_Day2_2.xlsx:
-- StepWidth_Day6_2.xlsx:
+- StepLength_Day2_2.xlsx: Contains step length data for all conditions of the first training day (obtained via the data analysis)
+- StepLength_Day6_2.xlsx: Contains step length data for all conditions of the last training day (obtained via the data analysis)
+- StepWidth_Day2_2.xlsx: Contains step width data for all conditions of the first training day (obtained via the data analysis)
+- StepWidth_Day6_2.xlsx: Contains step width data for all conditions of the last training day (obtained via the data analysis)
 
 **Data Files: Friedman Test**
-- StepLength_2vs6_2.xlsx:
-- StepWidth_2vs6_2.xlsx:
+- StepLength_2vs6_2.xlsx: Contains step length data for all conditions and both training days
+- StepWidth_2vs6_2.xlsx: Contains step width data for all conditions and both training days
 
 **Data Files: Pairwise Test**
-- StepLengthDay2vsDay6_2.xlsx:
-- StepWidthDay2vsDay6_2.xlsx:
+- StepLengthDay2vsDay6_2.xlsx: Contains step length data for all conditions and both training days
+- StepWidthDay2vsDay6_2.xlsx: Contains step width data for all conditions and both training days
 
 ## Installing dependencies
 To run all scripts a version of Matlab 2022b and R-4.4.0 and RStudio is needed.
